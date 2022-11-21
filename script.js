@@ -28,11 +28,19 @@ console.log(ticket);
 let discountMinors = 20 * ticket / 100;
 let discountOver = 40 * ticket /100 
 
+//variabile prezzo scontato
 let priceDiscount;
 
+// verifica se si è idonei per lo sconto minorenni e over
 if ( age < 18 ){
     priceDiscount = ticket - discountMinors;
-    console.log(priceDiscount)
+    console.log(priceDiscount);
+    document.getElementById("output").innerHTML = priceDiscount.toFixed(2) + '&euro;';
+
+}else if ( age > 65 ){
+    priceDiscount = ticket - discountOver;
+    console.log(priceDiscount);
+    document.getElementById("output").innerHTML = priceDiscount.toFixed(2) + '&euro;';
+} else{
+    document.getElementById("output").innerHTML = ticket.toFixed(2) + ' &euro; '
 }
-
-
