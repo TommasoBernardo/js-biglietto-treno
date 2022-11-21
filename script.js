@@ -7,8 +7,14 @@ Sulla base di queste informazioni dovrà calcolare il prezzo totale del viaggio,
 L'output del prezzo finale va emesso (presentato all'utente) in forma umana (con massimo due decimali, per indicare centesimi sul prezzo).
 */
 
-let kilometers = prompt ("Quanti chilometri vuoi percorrere ?");
-console.log(kilometers);
-
 let age = prompt ("Ciao, per favore inserisci quanti anni hai !");
 console.log(age);
+
+let kilometers = parseInt ( prompt ("Quanti chilometri vuoi percorrere ?"));
+console.log(kilometers);
+
+let ticket;
+let priceKm = 0.21;
+
+ticket = kilometers * priceKm ;
+console.log(ticket)
